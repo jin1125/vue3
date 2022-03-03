@@ -1,27 +1,22 @@
 const app = Vue.createApp({
   data: () => ({
-    message: 'Hello Vue.js!',
-    count: 99,
-    user: {
-      lastName: 'Nakamura',
-      firstName: 'Yuta',
-      age: '23',
-      prefecture: 'Tokyo',
-    },
-    colors: ['red', 'green', 'blue'],
-    now: '-'
+    newItem: '',
+    todos: []
   }),
   methods: {
-    onClick: function() {
-      // console.log('onClick');
-      this.now = new Date().toLocaleString()
-      // console.log(this);
+    addItem: function(event) {
+      if (this.newItem === '')  return
+      let todo = {
+        item: this.newItem,
+        isDone: false
+      }
+      this.todos.push(todo)
+      this.newItem = ''
+    },
+    deleteItem: function (index) {
+      this.todos.splice(index, 1)
     }
   }
-})
-
-app.component('hello-component', {
-  template: '<p>hello</p>'
 })
 
 app.mount('#app')
