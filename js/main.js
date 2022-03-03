@@ -20,5 +20,9 @@ const app = Vue.createApp({
   }
 })
 
+app.component('hello-component', {
+  template: '<p>hello</p>'
+})
+
 app.mount('#app')
 
