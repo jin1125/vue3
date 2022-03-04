@@ -1,21 +1,14 @@
 const app = Vue.createApp({
   data: () => ({
-    newItem: '',
-    todos: []
+    km: 0,
+    m: 0
   }),
   methods: {
-    addItem: function(event) {
-      if (this.newItem === '')  return
-      let todo = {
-        item: this.newItem,
-        isDone: false
-      }
-      this.todos.push(todo)
-      this.newItem = ''
-    },
-    deleteItem: function (index) {
-      this.todos.splice(index, 1)
-    }
+  },
+  computed: {
+  },
+  watch: {
+
   }
 })
 
