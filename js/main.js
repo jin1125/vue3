@@ -1,15 +1,16 @@
 const app = Vue.createApp({
   data: () => ({
-    km: 0,
-    m: 0
+    counter: 0
   }),
   methods: {
+    clickHandler: function() {
+      this.counter++
+    }
   },
   computed: {
   },
   watch: {
-
-  }
+  },
 })
 
 app.mount('#app')
