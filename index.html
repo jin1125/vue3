@@ -8,10 +8,12 @@
   <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-  <div id="app">
-    <p>{{ counter }}</p>
-    <button @click="clickHandler">click</button>
+  <div id="app" v-cloak>
+    <button-counter></button-counter>
+    <button-counter></button-counter>
+    <button-counter></button-counter>
   </div>
+
   <script src="https://unpkg.com/vue@3.1.5"></script>
   <script src="https://unpkg.com/axios@0.21.1/dist/axios.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.js"></script>
